@@ -16,3 +16,23 @@ CREATE TABLE `user` (
 ALTER TABLE `user` ADD UNIQUE (`username`);
 ALTER TABLE `user` ADD UNIQUE (`email`);
 ALTER TABLE `user` ADD UNIQUE (`phone`);
+
+
+DROP TABLE IF EXISTS `file`;
+CREATE TABLE `file` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `file_name` varchar(50) DEFAULT NULL comment 'file name',
+  `file_size` int DEFAULT NULL comment 'file size',
+  `file_type` varchar(50) DEFAULT NULL comment 'file type',
+  PRIMARY KEY (`id`)
+);
+
+DROP TABLE IF EXISTS `llz`;
+CREATE TABLE `llz` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `llzname` varchar(100) DEFAULT NULL comment 'llzname',
+  `llzpassword` varchar(100) DEFAULT NULL comment 'llzpassword',
+  `llzemail` varchar(100) DEFAULT NULL comment 'llzemail',
+  `llzphone` varchar(100) DEFAULT NULL comment 'llzphone',
+  PRIMARY KEY (`id`)
+);
